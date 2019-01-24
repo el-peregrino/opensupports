@@ -17,7 +17,8 @@ class Language extends DataStore {
         'it',
         'br',
         'gr',
-        'nl'
+        'nl',
+        'cs'
     ];
 
     public static function getProps() {
