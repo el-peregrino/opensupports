@@ -847,27 +847,27 @@ class MailTexts {
               'Registrace {{to}} - OpenSupports',
               'Ověření vašeho účtu',
               'Welcome to our support center, {{name}}!. We need you to verify this email in order to get access to your account.',
-              'Use this code in {{url}}/verify-token/{{to}}/{{verificationToken}} or click the button below.',
+              'Použijte tento kód na {{url}}/verify-token/{{to}}/{{verificationToken}} nebo klikněte na tlačítko níže.',
           ],
           'USER_PASSWORD' => [
               'Změna hesla - OpenSupports',
               'Vaše heslo bylo změněno',
-              'Hi, {{name}}. We want to inform you that your password has changed from your customer panel.'
+              'Dobrý den, {{name}}. Tímto vás informujeme, že vaše heslo bylo změněno z vašeho zákaznického panelu.'
           ],
           'USER_EMAIL' => [
               'Změna emailové adresy - OpenSupports',
               'Vaše emailová adresa byla změněna',
-              'Hi, {{name}}. We want to inform you that your email has changed to {{newemail}} from your customer panel.'
+              'Dobrý den, {{name}}. Tímto vás informujeme, že vaše emailová adresa byla změněna na {{newemail}} z vašeho zákaznického panelu.'
           ],
           'PASSWORD_FORGOT' => [
               'Obnovení hesla - OpenSupports',
               'Vaše heslo bylo resetováno',
-              'Hi, {{name}}. You have requested to recover your password.',
-              'Use this code in {{url}}/recover-password?email={{to}}&token={{token}} or click the button below.',
+              'Dobrý den, {{name}}. Požádali jste o obnovení hesla.',
+              'Použijte tento kód na {{url}}/recover-password?email={{to}}&token={{token}} nebo klikněte na tlačítko níže.',
           ],
           'USER_SYSTEM_DISABLED' => [
-              'Access system changed - OpenSupports',
-              'Access system changed',
+              'Změna systému přístupu - OpenSupports',
+              'Systém přístupu byl změněn',
               'Hello, {{name}}. The system to access tickets has changed.',
               'You can access and see to your tickets by using your email and the ticket number.Click in the button below to see your tickets.',
           ],
@@ -878,25 +878,25 @@ class MailTexts {
               'You can access your account by using this email <i>({{to}})</i> and password below.Please change the password as soon as you log in.',
           ],
           'TICKET_CREATED' => [
-              '#{{ticketNumber}} Ticket created - OpenSupports',
+              '#{{ticketNumber}} Požadavek vytvořen - OpenSupports',
               'Ticket created',
               'Hello, {{name}}. You have sent a new ticket titled <i>{{title}}</i> to our support center.',
               'You can access to the ticket by its ticket number or you can click on the button below.',
           ],
           'TICKET_RESPONDED' => [
-              '#{{ticketNumber}} New response - OpenSupports',
+              '#{{ticketNumber}} Nová odpověď - OpenSupports',
               'Ticket responded',
               'Hello, {{name}}. You have received a response in the ticket titled <i>{{title}}</i>.',
               'Please click below to see the new response.'
           ],
           'TICKET_CLOSED' => [
-             '#{{ticketNumber}} Ticket closed - OpenSupports',
+             '#{{ticketNumber}} Požadavek uzavřen - OpenSupports',
               'Ticket closed',
               'Hello, {{name}}. A ticket you sent titled <i>{{title}}</i> has been closed.',
               'You can access to the ticket by its ticket number. Or you can click on the button below.'
           ],
           'TICKET_CREATED_STAFF' => [
-              '#{{ticketNumber}} Ticket created - OpenSupports',
+              '#{{ticketNumber}} Požadavek vytvořen - OpenSupports',
               'Ticket created',
               'User {{name}} has created a new ticket titled <i>{{title}}</i>.',
               'You can access to the ticket by its ticket number.',
