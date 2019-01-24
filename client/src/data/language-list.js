@@ -12,6 +12,7 @@ import italianLanguage    from 'data/languages/it';
 import brazilLanguage     from 'data/languages/br';
 import greekLanguage      from 'data/languages/gr';
 import dutchLanguage      from 'data/languages/nl';
+import czechLanguage      from 'data/languages/cs';
 
 export default {
     'en': {
@@ -69,5 +70,9 @@ export default {
     'nl': {
         name: 'Dutch',
         data: dutchLanguage
+    },
+    'cs': {
+        name: 'Czech',
+        data: czechLanguage
     },
 };
