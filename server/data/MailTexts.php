@@ -844,24 +844,24 @@ class MailTexts {
         ],
         'cs' => [
           'USER_SIGNUP' => [
-              'Signup {{to}} - OpenSupports',
-              'Verify your account',
+              'Registrace {{to}} - OpenSupports',
+              'Ověření vašeho účtu',
               'Welcome to our support center, {{name}}!. We need you to verify this email in order to get access to your account.',
               'Use this code in {{url}}/verify-token/{{to}}/{{verificationToken}} or click the button below.',
           ],
           'USER_PASSWORD' => [
-              'Password edited - OpenSupports',
-              'Password changed',
+              'Změna hesla - OpenSupports',
+              'Vaše heslo bylo změněno',
               'Hi, {{name}}. We want to inform you that your password has changed from your customer panel.'
           ],
           'USER_EMAIL' => [
-              'Email edited - OpenSupports',
-              'Email changed',
+              'Změna emailové adresy - OpenSupports',
+              'Vaše emailová adresa byla změněna',
               'Hi, {{name}}. We want to inform you that your email has changed to {{newemail}} from your customer panel.'
           ],
           'PASSWORD_FORGOT' => [
-              'Recover password - OpenSupports',
-              'Recover password',
+              'Obnovení hesla - OpenSupports',
+              'Vaše heslo bylo resetováno',
               'Hi, {{name}}. You have requested to recover your password.',
               'Use this code in {{url}}/recover-password?email={{to}}&token={{token}} or click the button below.',
           ],
@@ -872,8 +872,8 @@ class MailTexts {
               'You can access and see to your tickets by using your email and the ticket number.Click in the button below to see your tickets.',
           ],
           'USER_SYSTEM_ENABLED' => [
-              'Account created - OpenSupports',
-              'Account created',
+              'Vytvoření účtu - OpenSupports',
+              'Váš účet byl vytvořen',
               'Hello, {{name}}. We have created an account where you can access the tickets you have sent us.',
               'You can access your account by using this email <i>({{to}})</i> and password below.Please change the password as soon as you log in.',
           ],
