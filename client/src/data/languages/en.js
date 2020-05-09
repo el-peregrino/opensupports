@@ -196,6 +196,7 @@ export default {
     'IMAGE_HEADER_URL': 'Image header URL',
     'IMAGE_HEADER_DESCRIPTION': 'Image that will be used as header of the email',
     'EMAIL_SETTINGS': 'Email Settings',
+    'ADD_NEW': 'Add New',
 
     'CHART_CREATE_TICKET': 'Tickets created',
     'CHART_CLOSE': 'Tickets closed',
@@ -376,11 +377,15 @@ export default {
     'SUCCESSFUL_CONNECTION': 'Successful connection',
     'UNSUCCESSFUL_CONNECTION': 'Unsuccessful connection',
     'SERVER_CREDENTIALS_WORKING': 'Server credentials are working correctly',
+    'WILL_CLOSE_TICKET': 'This ticket will be closed.',
+    'WILL_DELETE_TICKET': 'This ticket will be deleted.',
 
     'LAST_7_DAYS': 'Last 7 days',
     'LAST_30_DAYS': 'Last 30 days',
     'LAST_90_DAYS': 'Last 90 days',
     'LAST_365_DAYS': 'Last 365 days',
+    'DATE_FORMAT': '%d. %m. %Y',
+    'DATETIME_FORMAT': '%d %b %Y at %H:%M',
 
     'ACTIVITY_COMMENT_THIS': 'commented this ticket',
     'ACTIVITY_ASSIGN_THIS': 'assigned this ticket to',

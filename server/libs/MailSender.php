@@ -8,17 +8,19 @@ class MailSender {
     private function __construct() {
         $this->setConnectionSettings(
             Setting::getSetting('smtp-host')->getValue(),
+            Setting::getSetting('smtp-port')->getValue(),
             Setting::getSetting('smtp-user')->getValue(),
             Setting::getSetting('smtp-pass')->getValue(),
             Setting::getSetting('server-email')->getValue()
         );
     }
 
-    public function setConnectionSettings($host, $user, $pass, $serverEmail) {
+    public function setConnectionSettings($host, $port, $user, $pass, $serverEmail) {
         $this->mailOptions['from'] = $serverEmail;
         $this->mailOptions['fromName'] = 'OpenSupports';
 
         $this->mailOptions['smtp-host'] = $host;
+        $this->mailOptions['smtp-port'] = $port;
         $this->mailOptions['smtp-user'] = $user;
         $this->mailOptions['smtp-pass'] = $pass;
     }
@@ -68,6 +70,7 @@ class MailSender {
             $this->mailerInstance->isSMTP();
             $this->mailerInstance->SMTPAuth = true;
             $this->mailerInstance->Host = $this->mailOptions['smtp-host'];
+            $this->mailerInstance->Port = $this->mailOptions['smtp-port'];
             $this->mailerInstance->Username = $this->mailOptions['smtp-user'];
             $this->mailerInstance->Password = $this->mailOptions['smtp-pass'];
             $this->mailerInstance->Timeout = 1000;

@@ -48,7 +48,9 @@ class AreYouSure extends React.Component {
                     <Icon name="times" size="2x"/>
                 </span>
                 <div className="are-you-sure__description" id="are-you-sure__description">
-                    {this.props.description || (this.props.type === 'secure' && i18n('PLEASE_CONFIRM_PASSWORD'))}
+                    {this.props.description}
+                    {(this.props.description && this.props.type === 'secure') ? <br/> : null}
+                    {(this.props.type === 'secure' && i18n('PLEASE_CONFIRM_PASSWORD'))}
                 </div>
                 {(this.props.type === 'secure') ? this.renderPassword() : null}
                 <span className="separator" />
@@ -70,7 +72,7 @@ class AreYouSure extends React.Component {
 
     renderPassword() {
         return (
-            <Input className="are-you-sure__password" password placeholder="password" name="password" ref="password" size="medium" value={this.state.password} onChange={this.onPasswordChange.bind(this)} onKeyDown={this.onInputKeyDown.bind(this)}/>
+            <Input className="are-you-sure__password" password placeholder={i18n('PASSWORD_LOWERCASE')} name="password" ref="password" size="medium" value={this.state.password} onChange={this.onPasswordChange.bind(this)} onKeyDown={this.onInputKeyDown.bind(this)}/>
         );
     }
 

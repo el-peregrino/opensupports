@@ -32,7 +32,7 @@ class TicketInfo extends React.Component {
                             {i18n('STATUS')}:
                         </span>
                         <span className={this.getStatusClass()}>
-                            {(this.props.ticket.closed) ? 'closed' : 'open'}
+                            {(this.props.ticket.closed) ? i18n('CLOSED') : i18n('OPENED')}
                         </span>
                     </div>
                     <div className="ticket-info__properties__priority">
@@ -40,7 +40,7 @@ class TicketInfo extends React.Component {
                             {i18n('PRIORITY')}:
                         </span>
                         <span className={this.getPriorityClass()}>
-                            {this.props.ticket.priority}
+                            {i18n(this.props.ticket.priority.toUpperCase())}
                         </span>
                     </div>
                     <div className="ticket-info__properties__owner">

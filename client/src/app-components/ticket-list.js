@@ -163,7 +163,7 @@ class TicketList extends React.Component {
     }
 
     getTableRows() {
-        return this.getTickets().map(this.gerTicketTableObject.bind(this));
+        return this.getTickets().map(this.getTicketTableObject.bind(this));
     }
 
     getTickets() {
@@ -172,7 +172,7 @@ class TicketList extends React.Component {
         }) : this.props.tickets;
     }
 
-    gerTicketTableObject(ticket) {
+    getTicketTableObject(ticket) {
         let titleText = (this.isTicketUnread(ticket)) ? ticket.title  + ' (1)' : ticket.title;
 
         return {

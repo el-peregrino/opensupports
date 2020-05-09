@@ -43,6 +43,7 @@ class EditSettingsController extends Controller {
             'imap-user',
             'imap-pass',
             'smtp-host',
+            'smtp-port',
             'smtp-user',
             'smtp-pass',
             'time-zone',

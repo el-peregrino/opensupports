@@ -842,7 +842,7 @@ class MailTexts {
               'U kunt dit incident bekijken via het incidentnummer. Of klik op de knop hieronder.',
           ],
         ],
-        'cs' => [
+        'cz' => [
           'USER_SIGNUP' => [
               'Registrace {{to}} - OpenSupports',
               'Ověření vašeho účtu',

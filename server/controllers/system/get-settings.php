@@ -46,6 +46,7 @@ class GetSettingsController extends Controller {
                     'url' => Setting::getSetting('url')->getValue(),
                     'title' => Setting::getSetting('title')->getValue(),
                     'server-email' => Setting::getSetting('server-email')->getValue(),
+					'smtp-port' => Setting::getSetting('smtp-port')->getValue(),
                     'smtp-host' => Setting::getSetting('smtp-host')->getValue(),
                     'smtp-user' => Setting::getSetting('smtp-user')->getValue(),
                     'imap-host' => Setting::getSetting('imap-host')->getValue(),

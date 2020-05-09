@@ -312,15 +312,15 @@ class TicketViewer extends React.Component {
     }
 
     onDepartmentDropdownChanged(event) {
-        AreYouSure.openModal(null, this.changeDepartment.bind(this, event.index));
+        AreYouSure.openModal(i18n('WILL_CHANGE_DEPARTMENT'), this.changeDepartment.bind(this, event.index));
     }
 
     onPriorityDropdownChanged(event) {
-        AreYouSure.openModal(null, this.changePriority.bind(this, event.index));
+        AreYouSure.openModal(i18n('WILL_CHANGE_PRIORITY'), this.changePriority.bind(this, event.index));
     }
 
     onAssignmentChange(event) {
-        AreYouSure.openModal(null, this.assingTo.bind(this, event.index));
+        AreYouSure.openModal(i18n('WILL_CHANGE_ASSIGNMENT'), this.assingTo.bind(this, event.index));
     }
 
     assingTo(index) {
@@ -347,17 +347,17 @@ class TicketViewer extends React.Component {
     }
 
     onReopenClick() {
-        AreYouSure.openModal(null, this.reopenTicket.bind(this));
+        AreYouSure.openModal(i18n('WILL_REOPEN_TICKET'), this.reopenTicket.bind(this));
     }
 
     onCloseTicketClick(event) {
         event.preventDefault();
-        AreYouSure.openModal(null, this.closeTicket.bind(this));
+        AreYouSure.openModal(i18n('WILL_CLOSE_TICKET'), this.closeTicket.bind(this));
     }
 
     onDeleteTicketClick(event) {
         event.preventDefault();
-        AreYouSure.openModal(null, this.deleteTicket.bind(this));
+        AreYouSure.openModal(i18n('WILL_DELETE_TICKET'), this.deleteTicket.bind(this));
     }
 
     reopenTicket() {
@@ -422,7 +422,7 @@ class TicketViewer extends React.Component {
         };
 
         if (this.state.commentEdited && index) {
-            AreYouSure.openModal(null, replaceContentWithCustomResponse);
+            AreYouSure.openModal(i18n('WILL_REPLACE_RESPONSE'), replaceContentWithCustomResponse);
         } else {
             replaceContentWithCustomResponse();
         }
@@ -470,7 +470,7 @@ class TicketViewer extends React.Component {
         const {staffMembers, userDepartments, userId, ticket} = this.props;
         const ticketDepartmentId = ticket.department.id;
         let staffAssignmentItems = [
-            {content: 'None', id: 0}
+            {content: i18n('NONE'), id: 0}
         ];
 
         if(_.any(userDepartments, {id: ticketDepartmentId})) {

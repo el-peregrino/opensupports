@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import i18n from 'lib-app/i18n';
 import Menu from 'core-components/menu';
 import Button from 'core-components/button';
 import Icon from 'core-components/icon';
@@ -16,7 +17,7 @@ class Listing extends React.Component {
     };
 
     static defaultProps = {
-        addNewText: 'Add new'
+        addNewText: i18n('ADD_NEW')
     };
 
     render() {

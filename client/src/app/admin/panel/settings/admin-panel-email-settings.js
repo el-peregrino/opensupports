@@ -17,6 +17,7 @@ import Form from 'core-components/form';
 import FormField from 'core-components/form-field';
 import SubmitButton from 'core-components/submit-button';
 import Message from 'core-components/message';
+import Input from 'core-components/input';
 
 class AdminPanelEmailSettings extends React.Component {
 
@@ -48,8 +49,9 @@ class AdminPanelEmailSettings extends React.Component {
         },
         smtpForm: {
             ['smtp-host']: '',
+            ['smtp-port']: '',
             ['smtp-user']: '',
-            ['smtp-pass']: 'HIDDEN',
+            ['smtp-pass']: '',
         },
         imapForm: {
             ['imap-host']: '',
@@ -129,8 +131,9 @@ class AdminPanelEmailSettings extends React.Component {
                         <Form onSubmit={this.submitSMTP.bind(this)} onChange={smtpForm => this.setState({smtpForm})}
                               values={this.state.smtpForm} loading={this.state.smtpLoading}>
                             <FormField name="smtp-host" label={i18n('SMTP_SERVER')} fieldProps={{size: 'large'}}/>
+                            <FormField name="smtp-port" label={i18n('SMTP_PORT')} fieldProps={{size: 'large'}}/>
                             <FormField name="smtp-user" label={i18n('SMTP_USER')} fieldProps={{size: 'large'}}/>
-                            <FormField name="smtp-pass" label={i18n('SMTP_PASSWORD')} fieldProps={{size: 'large'}}/>
+                            <FormField name="smtp-pass" label={i18n('SMTP_PASSWORD')} fieldProps={{size: 'large', password: true}}/>
                             <div className="admin-panel-email-settings__server-form-buttons">
                                 <SubmitButton className="admin-panel-email-settings__submit" type="secondary"
                                               size="small">{i18n('SAVE')}</SubmitButton>
@@ -343,7 +346,7 @@ class AdminPanelEmailSettings extends React.Component {
             smtpLoading: true
         });
 
-        this.editSettings(form, 'SMTP_SUCCESS')
+        this.editSettings(form, i18n('SMTP_SUCCESS'))
         .then(() => this.setState({
             smtpLoading: false
         }));
@@ -474,8 +477,9 @@ class AdminPanelEmailSettings extends React.Component {
             },
             smtpForm: {
                 ['smtp-host']: result.data['smtp-host'],
+                ['smtp-port']: result.data['smtp-port'],
                 ['smtp-user']: result.data['smtp-user'],
-                ['smtp-pass']: 'HIDDEN',
+                ['smtp-pass']: '',
             },
             imapForm: {
                 ['imap-host']: result.data['imap-host'],

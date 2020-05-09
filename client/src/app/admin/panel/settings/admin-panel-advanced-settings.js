@@ -65,15 +65,19 @@ class AdminPanelAdvancedSettings extends React.Component {
                             <div className="admin-panel-advanced-settings__text">
                                 {i18n('INCLUDE_USERS_VIA_CSV')} <InfoTooltip text={i18n('CSV_DESCRIPTION')} />
                             </div>
-                            <FileUploader className="admin-panel-advanced-settings__button" text="Upload" onChange={this.onImportCSV.bind(this)}/>
+                            <FileUploader className="admin-panel-advanced-settings__button" text={i18n('UPLOAD')} onChange={this.onImportCSV.bind(this)}/>
                         </div>
                         <div className="col-md-4">
                             <div className="admin-panel-advanced-settings__text">{i18n('BACKUP_DATABASE')}</div>
-                            <Button className="admin-panel-advanced-settings__button" type="secondary" size="medium" onClick={this.onBackupDatabase.bind(this)}>Download</Button>
+                            <Button className="admin-panel-advanced-settings__button" type="secondary" size="medium" onClick={this.onBackupDatabase.bind(this)}>
+                                {i18n('DOWNLOAD')}
+                            </Button>
                         </div>
                         <div className="col-md-4">
                             <div className="admin-panel-advanced-settings__text">{i18n('DELETE_ALL_USERS')}</div>
-                            <Button className="admin-panel-advanced-settings__button" size="medium" onClick={this.onDeleteAllUsers.bind(this)}>Delete</Button>
+                            <Button className="admin-panel-advanced-settings__button" size="medium" onClick={this.onDeleteAllUsers.bind(this)}>
+                                {i18n('DELETE')}
+                            </Button>
                         </div>
                     </div>
                     <div className="col-md-12">
@@ -165,7 +169,7 @@ class AdminPanelAdvancedSettings extends React.Component {
     }
 
     onDeleteKeyClick() {
-        AreYouSure.openModal(null, () => {
+        AreYouSure.openModal(i18n('WILL_DELETE_APIKEY'), () => {
             API.call({
                 path: '/system/delete-api-key',
                 data: {
@@ -183,11 +187,11 @@ class AdminPanelAdvancedSettings extends React.Component {
     }
 
     onToggleButtonUserSystemChange() {
-        AreYouSure.openModal(null, this.onAreYouSureUserSystemOk.bind(this), 'secure');
+        AreYouSure.openModal(i18n('WILL_TOGGLE_USERSYSTEM'), this.onAreYouSureUserSystemOk.bind(this), 'secure');
     }
 
     onToggleButtonRegistrationChange() {
-        AreYouSure.openModal(null, this.onAreYouSureRegistrationOk.bind(this), 'secure');
+        AreYouSure.openModal(i18n('WILL_TOGGLE_REGISTRATION'), this.onAreYouSureRegistrationOk.bind(this), 'secure');
     }
 
     onAreYouSureUserSystemOk(password) {
@@ -223,7 +227,7 @@ class AdminPanelAdvancedSettings extends React.Component {
     }
 
     onImportCSV(event) {
-        AreYouSure.openModal(null, this.onAreYouSureCSVOk.bind(this, event.target.value), 'secure');
+        AreYouSure.openModal(i18n('WILL_IMPORT_CSV'), this.onAreYouSureCSVOk.bind(this, event.target.value), 'secure');
     }
 
     onAreYouSureCSVOk(file, password) {
@@ -266,7 +270,7 @@ class AdminPanelAdvancedSettings extends React.Component {
     }
 
     onDeleteAllUsers() {
-        AreYouSure.openModal(null, this.onAreYouSureDeleteAllUsersOk.bind(this), 'secure');
+        AreYouSure.openModal(i18n('WILL_DELETE_ALLUSERS'), this.onAreYouSureDeleteAllUsersOk.bind(this), 'secure');
     }
 
     onAreYouSureDeleteAllUsersOk(password) {
